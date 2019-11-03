@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# text colors
 Green=$'\e[1;32m'
 Red=$'\e[1;31m'
 Blue=$'\e[1;34m'
