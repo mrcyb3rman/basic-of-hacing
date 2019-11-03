@@ -78,10 +78,9 @@ then
 	while true
 	do
 		clear
-		read -p "$Blue Enter Name Server IP: " ip
 		read -p "$Blue Enter Domain Name: " name
 		clear
-		dig @$ip $name -t AXFR
+		dig $name -t AXFR
 		echo " "
 		read -p "$Blue Do You want to continue with dig? (y/n) " choice
 		if [ $choice = "y" ]
