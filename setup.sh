@@ -5,6 +5,7 @@ echo "[!] Updating..."
 apt update -y > install.log
 echo
 echo "[!] Installing Dependencies..."
+echo
 echo '    [+] dnsutils'
 apt-get install dnsutils&>> install.log
 echo "    [+] nmap"
