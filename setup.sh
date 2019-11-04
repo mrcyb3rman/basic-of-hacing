@@ -6,13 +6,13 @@ apt update -y > install.log
 echo
 echo "[!] Installing Dependencies..."
 echo '    [+] dnsutils'
-apt install dnsutils & >> install.log
+apt-get install dnsutils&>> install.log
 echo "    [+] nmap"
-apt install nmap & >> install.log
+apt-get install nmap&>> install.log
 echo "    [+] theharvester"
-apt install theharvester & >> install.log
+apt-get install theharvester&>> install.log
 echo "    [+] metagoofil"
-apt install metagoofil & >> install.log
+apt-get install metagoofil&>> install.log
 echo
 echo "[!] Setting Permissions..."
 chmod 777 allinone.sh
