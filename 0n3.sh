@@ -42,7 +42,7 @@ then
 		then
 			read -p "$Blue IP address to destroy: " ip
 			echo
-			nmap -sV -Pn $ip | grep -e tcp -e udp
+			nmap -sV -Pn $ip | grep -e tcp -e udp -e PORT
 		elif [ $i -eq 2 ]
 		then
 			read -p "$Blue IP address to scan: " ip
