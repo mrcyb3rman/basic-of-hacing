@@ -2,7 +2,7 @@
 clear
 echo
 echo "[!] Updating..."
-apt update -y > install.log
+apt-get update > install.log
 echo
 echo "[!] Installing Dependencies..."
 echo
@@ -14,6 +14,8 @@ echo "    [+] theharvester"
 apt-get install theharvester&>> install.log
 echo "    [+] metagoofil"
 apt-get install metagoofil&>> install.log
+echo '    [+] figlet'
+apt-get install figlet&>> install.log
 echo
 echo "[!] Setting Permissions..."
 chmod 777 0n3.sh
