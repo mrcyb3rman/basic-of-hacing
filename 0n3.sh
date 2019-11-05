@@ -41,23 +41,28 @@ then
 		if [ $i -eq 1 ]
 		then
 			read -p "$Blue IP address to destroy: " ip
-			nmap -sV -Pn $ip
+			echo
+			nmap -sV -Pn $ip | grep -e tcp -e udp
 		elif [ $i -eq 2 ]
 		then
 			read -p "$Blue IP address to scan: " ip
-			nmap -sTV -Pn $ip
+			echo
+			nmap -sTV -Pn $ip | grep -e tcp -e udp -e PORT
 		elif [ $i -eq 3 ]
 		then
 			read -p "$Blue IP address to scan: " ip
-			nmap -sUV -Pn $ip
+			echo
+			nmap -sUV -Pn $ip | grep -e tcp -e udp -e PORT
 		elif [ $i -eq 4 ]
 		then
 			read -p "$Blue IP address to scan: " ip
-			nmap -sXV -Pn $ip
+			echo
+			nmap -sXV -Pn $ip | grep -e tcp -e udp -e PORT
 		elif [ $i -eq 5 ]
 		then
 			read -p "$Blue IP address to scan: " ip
-			nmap -sNV -Pn $ip
+			echo
+			nmap -sNV -Pn $ip | grep -e tcp -e udp -e PORT
 		elif [ $i -eq 9 ]
 		then
 			break
