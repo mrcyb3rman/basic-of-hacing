@@ -19,7 +19,7 @@ echo "    $Green[4] theHarvester -> catalog emails, subdomains"
 echo "    $Green[9] Quit         -> Exit the Script"
 
 echo " "
-read -p "$Blue What is Your Choice: " choice
+read -p "$Blue --->>> " choice
 clear
 
 if [ $choice -eq 1 ]
@@ -36,7 +36,7 @@ then
 		echo "    $Green[6] Nmap Script Enginee"
 		echo "    $Green[9] Back to Main Menu"
 		echo " "
-		read -p "$Blue You are selecting ... " i
+		read -p "$Blue --->>> " i
 		echo " "
 		if [ $i -eq 1 ]
 		then
@@ -65,7 +65,7 @@ then
 			echo "$Yellow Wrong Choice!"
 		fi
 		echo " "
-		read -p "$Blue Do You want to continue with nmap? (y/n) " choice
+		read -p "$Blue Do you want to continue with nmap? (y/n) " choice
 		if [ $choice = "y" ]
 		then
 			continue
