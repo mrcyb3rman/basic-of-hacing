@@ -20,3 +20,11 @@ echo
 echo "[!] Setting Permissions..."
 chmod 777 0n3.sh
 echo -e "\n[+] You are Good to go!\n"
+echo
+read -p "Start 0n3? (y/n): " answer
+if [ $answer == "y" ]
+then
+	./0n3.sh
+else
+	exit
+fi
