@@ -63,6 +63,97 @@ then
 			read -p "$Blue IP address to scan: " ip
 			echo
 			nmap -sNV -Pn $ip | grep -e tcp -e udp -e PORT
+		elif [ $i -eq 6 ]
+		then
+			clear
+			echo
+			echo "    $Green[1] Auth     		[8] External"
+			echo "    $Green[2] Broadcast		[9] Fuzzer"
+			echo "    $Green[3] Brute    		[10] Intrusive"
+			echo "    $Green[4] Default  		[11] Malware"
+			echo "    $Green[5] Discovery		[12] Safe"
+			echo "    $Green[6] Dos      		[13] Version"
+			echo "    $Green[7] Exploit  		[14] Vuln"
+			echo "    $Green[99] Back to Main Menu"
+			echo 
+			read -p "$Blue --->>> " i
+			echo 
+			if [ $i -eq 1 ]
+			then
+				read -p "$Blue IP address to destroy: " ip
+				echo
+				nmap -sV -Pn --script auth $ip 
+			elif [ $i -eq 2 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script broadcast $ip 
+			elif [ $i -eq 3 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script brute $ip
+			elif [ $i -eq 4 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script default $ip
+			elif [ $i -eq 5 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script discovery $ip 
+			elif [ $i -eq 6 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script dos $ip 
+			elif [ $i -eq 7 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script exploit $ip
+			elif [ $i -eq 8 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script external $ip
+			elif [ $i -eq 9 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script fuzzer $ip
+			elif [ $i -eq 10 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script intrusive $ip
+			elif [ $i -eq 11 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script malware $ip
+			elif [ $i -eq 12 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script safe $ip
+			elif [ $i -eq 13 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script version $ip
+			elif [ $i -eq 14 ]
+			then
+				read -p "$Blue IP address to scan: " ip
+				echo
+				nmap -sV -Pn --script vuln $ip        
+			elif [ $i -eq 99 ]
+			then
+				break
+			else
+				echo "$Yellow Wrong Choice!"
+			fi
 		elif [ $i -eq 9 ]
 		then
 			break
